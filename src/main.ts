@@ -12,7 +12,8 @@ export const schema = createSchema({
     "utf-8"
   ),
   resolvers: {
-    Query
+    Query,
+    User
   },
 });
 function main() {
