@@ -13,7 +13,7 @@ export const schema = createSchema({
   ),
   resolvers: {
     Query,
-    User
+    User 
   },
 });
 function main() {
