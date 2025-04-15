@@ -2,8 +2,14 @@ type Query {
   hello: String!
 }
 
-type user {
+type User {
   name: String
   age: Int
   isWorking: Boolean
+  roles: [Role]
+}
+
+type Role {
+  designation: String,
+  methods: [String]
 }
