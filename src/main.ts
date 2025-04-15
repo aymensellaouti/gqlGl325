@@ -1,6 +1,7 @@
 import { createSchema, createYoga } from "graphql-yoga";
 import { createServer } from "http";
 import { Query } from "./Query";
+import { User } from "./User";
 
 
 const fs = require("fs");
@@ -11,7 +12,7 @@ export const schema = createSchema({
     "utf-8"
   ),
   resolvers: {
-    Query,
+    Query
   },
 });
 function main() {

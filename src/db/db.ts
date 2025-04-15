@@ -5,13 +5,13 @@ export const DB = {
       name: "aymen sellaouti",
       age: 42,
       isWorking: true,
-      roles: 1
+      roles: [1]
     },
     {
       name: "skander sellaouti",
       age: 6,
       isWorking: false,
-      role: 2
+      role: [2]
     },
   ],
   roles: [
