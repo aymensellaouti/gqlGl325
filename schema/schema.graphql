@@ -1,8 +1,12 @@
 type Query {
   hello: String!
+  users: [User]
+  workers(isWorking:Boolean): [User] 
+  roles: [Role!]
 }
 
 type User {
+  id: ID!
   name: String
   age: Int
   isWorking: Boolean
@@ -10,6 +14,7 @@ type User {
 }
 
 type Role {
+  id: ID!
   designation: String,
   methods: [String]
 }
