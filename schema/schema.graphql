@@ -6,16 +6,27 @@ type Query {
   user(id: ID): User
 }
 
-type User {
+interface Human {
+  id: ID!
+  name: String
+  age: Int
+}
+type User implements Human {
   id: ID!
   name: String
   age: Int
   isWorking: Boolean
   roles: [Role]
 }
-
 type Role {
   id: ID!
-  designation: String,
+  designation: String
   methods: [String]
 }
+type Player implements Human {
+  id: ID!
+  name: String!
+  age: Int
+  level: Int
+}
+
