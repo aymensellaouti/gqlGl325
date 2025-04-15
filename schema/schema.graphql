@@ -3,6 +3,7 @@ type Query {
   users: [User]
   workers(isWorking:Boolean): [User] 
   roles: [Role!]
+  user(id: ID): User
 }
 
 type User {
