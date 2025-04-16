@@ -1,5 +1,5 @@
 {
-  "name": "gqlgl32025",
+  "name": "gqlExemplesDeCours",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@graphql-tools/schema": "10.0.23",
+    "@graphql-yoga/render-graphiql": "^5.13.4",
     "@types/node": "^22.14.0",
     "cross-env": "^7.0.3",
     "graphql": "16.10.0",

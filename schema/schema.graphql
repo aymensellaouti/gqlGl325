@@ -4,14 +4,15 @@ type Query {
   workers(isWorking:Boolean): [User] 
   roles: [Role!]
   user(id: ID): User
+  persons: [Person]
 }
 
-interface Human {
+interface Person {
   id: ID!
   name: String
   age: Int
 }
-type User implements Human {
+type User implements Person {
   id: ID!
   name: String
   age: Int
@@ -23,10 +24,10 @@ type Role {
   designation: String
   methods: [String]
 }
-type Player implements Human {
+type ProblemSolver implements Person {
   id: ID!
   name: String!
   age: Int
-  level: Int
+  level: String
+  codeForceNickname: String!
 }
-

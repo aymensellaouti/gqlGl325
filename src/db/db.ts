@@ -1,17 +1,18 @@
 export const DB = {
   users: [
     {
-      id:1,
+      id: 1,
       name: "aymen sellaouti",
       age: 42,
       isWorking: true,
-      roles: [1]
+      roles: [1],
     },
     {
+      id: 2,
       name: "skander sellaouti",
       age: 6,
       isWorking: false,
-      role: [2]
+      roles: [2],
     },
   ],
   roles: [
@@ -24,6 +25,22 @@ export const DB = {
       id: 2,
       designation: "user",
       methods: ["GET"],
+    },
+  ],
+  problemSolvers: [
+    {
+      id: 1,
+      name: "orzdevinwang",
+      age: 30,
+      level: "Legendary Grandmaster",
+      codeForceNickname: "orzdevinwang",
+    },
+    {
+      id: 2,
+      name: "Tourist",
+      age: 30,
+      level: "Legendary Grandmaster",
+      codeForceNickname: "Tourist",
     },
   ],
 };

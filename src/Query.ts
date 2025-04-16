@@ -19,4 +19,8 @@ export const Query = {
   workers: (parent, { isWorking = false }, { db }, info) =>
     db.users.filter((user) => user.isWorking == isWorking),
   roles: (parent, params, { db }, info) => db.roles,
+  persons: (parent, params, { db }, info) => [
+    ...db.users,
+    ...db.problemSolvers,
+  ],
 }; 

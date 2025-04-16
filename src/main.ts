@@ -3,7 +3,8 @@ import { createServer } from "http";
 import { Query } from "./Query";
 import { User } from "./User";
 import { DB } from "./db/db";
-
+import { renderGraphiQL } from "@graphql-yoga/render-graphiql";
+import { Person } from "./Person";
 
 const fs = require("fs");
 const path = require("path");
@@ -14,11 +15,12 @@ export const schema = createSchema({
   ),
   resolvers: {
     Query,
-    User 
+    User,
+    Person 
   },
 });
 function main() {
-  const yoga = createYoga({ schema, context: {db: DB} });
+  const yoga = createYoga({ schema, context: { db: DB }, renderGraphiQL });
   const server = createServer(yoga);
   server.listen(4000, () => {
     console.info("Server is running on http://localhost:4000/graphql");
