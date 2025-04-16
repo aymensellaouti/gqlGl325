@@ -5,6 +5,7 @@ import { User } from "./User";
 import { DB } from "./db/db";
 import { renderGraphiQL } from "@graphql-yoga/render-graphiql";
 import { Person } from "./Person";
+import { Mutation } from "./Mutation";
 
 const fs = require("fs");
 const path = require("path");
@@ -16,7 +17,8 @@ export const schema = createSchema({
   resolvers: {
     Query,
     User,
-    Person 
+    Person,
+    Mutation 
   },
 });
 function main() {

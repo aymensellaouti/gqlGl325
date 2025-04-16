@@ -6,6 +6,9 @@ type Query {
   user(id: ID): User
   persons: [Person]
 }
+type Mutation {
+  addUser(input: addUserInput): User
+}
 
 interface Person {
   id: ID!
@@ -30,4 +33,11 @@ type ProblemSolver implements Person {
   age: Int
   level: String
   codeForceNickname: String!
+}
+
+input addUserInput {
+  name: String!
+  age: Int 
+  isWorking: Boolean
+  roles: [ID]
 }
